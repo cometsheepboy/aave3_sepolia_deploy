@@ -28,6 +28,11 @@ module.exports = {
       ...commons,
     },
     {
+      name: "sepolia-testnet-v3",
+      args: "run deploy:market:aave:sepolia",
+      ...commons,
+    },
+    {
       name: "optimism-testnet-v3",
       args: "run deploy:market:aave:optimism-test",
       ...commons,

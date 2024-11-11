@@ -40,6 +40,8 @@ export const getAlchemyKey = (net: eNetwork) => {
       return process.env.KOVAN_OPTIMISM_ALCHEMY_KEY || ALCHEMY_KEY;
     case eEthereumNetwork.rinkeby:
       return process.env.RINKEBY_ALCHEMY_KEY || ALCHEMY_KEY;
+    case eEthereumNetwork.sepolia:
+      return process.env.SEPOLIA_ALCHEMY_KEY || ALCHEMY_KEY;
     case ePolygonNetwork.mumbai:
       return process.env.POLYGON_MUMBAI_ALCHEMY_KEY || ALCHEMY_KEY;
     case ePolygonNetwork.polygon:
@@ -154,7 +156,7 @@ export const getCommonNetworkConfig = (
       mnemonic: MNEMONICS[networkName] || MNEMONIC,
       path: MNEMONIC_PATH,
       initialIndex: 0,
-      count: 10,
+      count: 1,
     },
   }),
   live: LIVE_NETWORKS[networkName] || false,

@@ -219,4 +219,12 @@ export default {
       },
     ],
   },
+  external: {
+   contracts: [
+     {
+       artifacts: 'node_modules/@aave/deploy-v3/artifacts',
+       deploy: 'node_modules/@aave/deploy-v3/dist/deploy',
+     },
+   ],
+ },
 };
